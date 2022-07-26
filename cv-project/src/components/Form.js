@@ -14,6 +14,8 @@ function Form() {
   let [workEnd, setWorkEnd] = useState("Present");
   let [job, setJob] = useState("Front end Developer");
 
+  function text(e) {}
+
   return (
     <div className="form">
       <form>
@@ -22,19 +24,43 @@ function Form() {
           <div className="personal">
             <div className="nameDiv">
               <label htmlFor="name">Name:</label>
-              <input type="text" name="name" id="name" />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
             <div className="numberDiv">
               <label htmlFor="number">Number:</label>
-              <input type="text" name="number" id="number" />
+              <input
+                type="text"
+                name="number"
+                id="number"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+              />
             </div>
             <div className="emailDiv">
               <label htmlFor="email">Email:</label>
-              <input type="text" name="email" id="email" />
+              <input
+                type="text"
+                name="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div className="locationDiv">
               <label htmlFor="location">Location:</label>
-              <input type="text" name="location" id="location" />
+              <input
+                type="text"
+                name="location"
+                id="location"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
           </div>
         </fieldset>
