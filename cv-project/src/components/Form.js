@@ -16,18 +16,18 @@ function Form() {
   let [job, setJob] = useState("Front end Developer");
 
   let props = {
-    name: { name },
-    number: { number },
-    email: { email },
-    location: { location },
-    school: { school },
-    course: { course },
-    startDate: { startDate },
-    endDate: { endDate },
-    workPlace: { workPlace },
-    workStart: { workStart },
-    workEnd: { workEnd },
-    job: { job },
+    name: name,
+    number: number,
+    email: email,
+    school: school,
+    location: location,
+    course: course,
+    startDate: startDate,
+    endDate: endDate,
+    workPlace: workPlace,
+    workStart: workStart,
+    workEnd: workEnd,
+    job: job,
   };
   return (
     <div className="form">
@@ -174,6 +174,18 @@ function Form() {
       </form>
 
       <CV {...props} />
+
+      {/* <CV   />
+      <CV number={number} />
+      <CV email={email} />
+      <CV location={location} />
+      <CV school={school} />
+      <CV startDate={startDate} />
+      <CV endDate={endDate} />
+      <CV workPlace={workPlace} />
+      <CV workStart={workStart} />
+      <CV workEnd={workEnd} />
+      <CV job={job} /> */}
     </div>
   );
 }
