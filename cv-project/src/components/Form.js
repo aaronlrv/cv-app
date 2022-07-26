@@ -71,19 +71,43 @@ function Form() {
             <div className="school">
               <div className="schoolDiv">
                 <label htmlFor="school">School:</label>
-                <input type="text" name="school" id="school" />
+                <input
+                  type="text"
+                  name="school"
+                  id="school"
+                  value={school}
+                  onChange={(e) => setSchool(e.target.value)}
+                />
               </div>
               <div className="courseDiv">
                 <label htmlFor="course">Course Name:</label>
-                <input type="text" name="course" id="course" />
+                <input
+                  type="text"
+                  name="course"
+                  id="course"
+                  value={course}
+                  onChange={(e) => setCourse(e.target.value)}
+                />
               </div>
               <div className="dateStart">
                 <label htmlFor="dateStart">Start Date</label>
-                <input type="text" name="dateStart" id="dateStart" />
+                <input
+                  type="text"
+                  name="dateStart"
+                  id="dateStart"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                />
               </div>
               <div className="dateEnd">
                 <label htmlFor="dateEnd">End Date</label>
-                <input type="text" name="dateEnd" id="dateEnd" />
+                <input
+                  type="text"
+                  name="dateEnd"
+                  id="dateEnd"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                />
               </div>
             </div>
           </div>
