@@ -46,6 +46,28 @@ function Form() {
           </div>
         </div>
       </fieldset>
+
+      <legend>Work experience</legend>
+      <fieldset>
+        <div className="work">
+          <div className="workDiv">
+            <label htmlFor="workPlace">Work Place:</label>
+            <input type="text" name="workPlace" id="workPlace" />
+          </div>
+          <div className="">
+            <label htmlFor="workStart">Work Start:</label>
+            <input type="text" name="workStart" id="workStart" />
+          </div>
+          <div className="">
+            <label htmlFor="workEnd">Work End:</label>
+            <input type="text" name="workEnd" id="workEnd" />
+          </div>
+          <div className="">
+            <label htmlFor="jobRole">Job role:</label>
+            <input type="text" name="jobRole" id="jobRole" />
+          </div>
+        </div>
+      </fieldset>
     </form>
   );
 }
