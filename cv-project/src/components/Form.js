@@ -58,8 +58,8 @@ function Form() {
                 type="text"
                 name="location"
                 id="location"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
               />
             </div>
           </div>
