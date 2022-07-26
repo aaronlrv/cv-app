@@ -118,19 +118,43 @@ function Form() {
           <div className="work">
             <div className="workDiv">
               <label htmlFor="workPlace">Work Place:</label>
-              <input type="text" name="workPlace" id="workPlace" />
+              <input
+                type="text"
+                name="workPlace"
+                id="workPlace"
+                value={workPlace}
+                onChange={(e) => setWorkPlace(e.target.value)}
+              />
             </div>
             <div className="">
               <label htmlFor="workStart">Work Start:</label>
-              <input type="text" name="workStart" id="workStart" />
+              <input
+                type="text"
+                name="workStart"
+                id="workStart"
+                value={workStart}
+                onChange={(e) => setWorkStart(e.target.value)}
+              />
             </div>
             <div className="">
               <label htmlFor="workEnd">Work End:</label>
-              <input type="text" name="workEnd" id="workEnd" />
+              <input
+                type="text"
+                name="workEnd"
+                id="workEnd"
+                value={workEnd}
+                onChange={(e) => setWorkEnd(e.target.value)}
+              />
             </div>
             <div className="">
               <label htmlFor="jobRole">Job role:</label>
-              <input type="text" name="jobRole" id="jobRole" />
+              <input
+                type="text"
+                name="jobRole"
+                id="jobRole"
+                value={job}
+                onChange={(e) => setJob(e.target.value)}
+              />
             </div>
           </div>
         </fieldset>
