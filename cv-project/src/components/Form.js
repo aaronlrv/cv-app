@@ -22,6 +22,30 @@ function Form() {
           </div>
         </div>
       </fieldset>
+
+      <legend> Education</legend>
+      <fieldset>
+        <div className="education">
+          <div className="school">
+            <div className="schoolDiv">
+              <label htmlFor="school">School:</label>
+              <input type="text" name="school" id="school" />
+            </div>
+            <div className="courseDiv">
+              <label htmlFor="course">Course Name:</label>
+              <input type="text" name="course" id="course" />
+            </div>
+            <div className="dateStart">
+              <label htmlFor="dateStart">Start Date</label>
+              <input type="text" name="dateStart" id="dateStart" />
+            </div>
+            <div className="dateEnd">
+              <label htmlFor="dateEnd">End Date</label>
+              <input type="text" name="dateEnd" id="dateEnd" />
+            </div>
+          </div>
+        </div>
+      </fieldset>
     </form>
   );
 }
