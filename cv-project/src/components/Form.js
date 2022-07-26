@@ -1,7 +1,7 @@
 function Form() {
   return (
     <form>
-      <legend> Input details</legend>
+      <legend> Personal details</legend>
       <fieldset>
         <div className="personal">
           <div className="nameDiv">
