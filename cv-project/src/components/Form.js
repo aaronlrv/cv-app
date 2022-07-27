@@ -30,9 +30,15 @@ function Form() {
     job: job,
   };
   return (
-    <div className="form" class="grid grid-cols-2">
+    <div
+      className="form"
+      class="grid grid-cols-2 grid-rows-1 bg-zinc-100 h-screen"
+    >
       <form>
-        <legend> Personal details</legend>
+        <legend class="mb-5 font-bold underline size text-2xl">
+          {" "}
+          Personal details
+        </legend>
         <fieldset>
           <div className="personal">
             <div className="nameDiv">
@@ -79,7 +85,10 @@ function Form() {
           </div>
         </fieldset>
 
-        <legend> Education</legend>
+        <legend class="mb-5 font-bold underline size text-2xl">
+          {" "}
+          Education
+        </legend>
         <fieldset>
           <div className="education">
             <div className="school">
@@ -127,7 +136,9 @@ function Form() {
           </div>
         </fieldset>
 
-        <legend>Work experience</legend>
+        <legend class="mb-5 font-bold underline size text-2xl">
+          Work experience
+        </legend>
         <fieldset>
           <div className="work">
             <div className="workDiv">
