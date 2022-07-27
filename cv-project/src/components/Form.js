@@ -30,7 +30,7 @@ function Form() {
     job: job,
   };
   return (
-    <div className="form">
+    <div className="form" class="grid col-span-3">
       <form>
         <legend> Personal details</legend>
         <fieldset>
@@ -43,6 +43,7 @@ function Form() {
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                class="text-red-500	"
               />
             </div>
             <div className="numberDiv">
