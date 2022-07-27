@@ -6,7 +6,7 @@ function Form() {
   let [number, setNumber] = useState("06531239685");
   let [email, setEmail] = useState("example@mail.com");
   let [location, setLocation] = useState("USA, Kentucky");
-  let [school, setSchool] = useState("Kingston Collge");
+  let [school, setSchool] = useState([]);
   let [course, setCourse] = useState("BS Computer Science");
   let [startDate, setStartDate] = useState("2020");
   let [endDate, setEndDate] = useState("Present");
@@ -19,9 +19,9 @@ function Form() {
     name: name,
     number: number,
     email: email,
-    school: school,
+    school: [school],
     location: location,
-    course: course,
+    course: [course],
     startDate: startDate,
     endDate: endDate,
     workPlace: workPlace,
@@ -29,6 +29,15 @@ function Form() {
     workEnd: workEnd,
     job: job,
   };
+
+  function addSchool(e) {
+    e.preventDefault();
+    let name = document.getElementById("school").value;
+    console.log(name);
+
+    setSchool((prev) => [...prev, name]);
+  }
+
   return (
     <div
       className="form"
@@ -104,13 +113,8 @@ function Form() {
                   <label class="mt-3 w-24 inline-block" htmlFor="school">
                     School:
                   </label>
-                  <input
-                    type="text"
-                    name="school"
-                    id="school"
-                    value={school}
-                    onChange={(e) => setSchool(e.target.value)}
-                  />
+                  <input type="text" name="school" id="school" />
+                  <button onClick={(e) => addSchool(e)}>Submit</button>
                 </div>
                 <div className="courseDiv">
                   <label class="mt-3 w-24 inline-block" htmlFor="course">
@@ -123,6 +127,7 @@ function Form() {
                     value={course}
                     onChange={(e) => setCourse(e.target.value)}
                   />
+                  <button>Submit</button>
                 </div>
                 <div className="dateStart">
                   <label class="mt-3 w-24 inline-block" htmlFor="dateStart">
@@ -133,8 +138,11 @@ function Form() {
                     name="dateStart"
                     id="dateStart"
                     value={startDate}
-                    onChange={(e) => setStartDate(e.target.value)}
+                    onChange={(e) =>
+                      setStartDate(e.target.value) + console.log(e.target.name)
+                    }
                   />
+                  <button>Submit</button>
                 </div>
                 <div className="dateEnd">
                   <label class="mt-3 w-24 inline-block" htmlFor="dateEnd">
@@ -147,6 +155,7 @@ function Form() {
                     value={endDate}
                     onChange={(e) => setEndDate(e.target.value)}
                   />
+                  <button>Submit</button>
                 </div>
               </div>
             </div>
