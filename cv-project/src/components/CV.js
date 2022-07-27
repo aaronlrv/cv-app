@@ -1,11 +1,16 @@
 function CV(props) {
   return (
     <div className="cv">
-      <div className="personalDetai">
-        <p>{props.name} </p>
-        <h3>{props.email}</h3>
-        <h3>{props.number}</h3>
-        <h3>{props.location}</h3>
+      <h1 class="font-bold underline text-2xl">CV Preview</h1>
+      <div className="personalDetai" class="flex flex-col ">
+        <div class="flex flex-row justify-center align-center text-3xl underline">
+          <p>{props.name} </p>
+        </div>
+        <div class="flex flex-row justify-center align-center gap-5">
+          <h3>{props.email}</h3>
+          <h3>{props.number}</h3>
+          <h3>{props.location}</h3>
+        </div>
       </div>
 
       <div className="Education">
