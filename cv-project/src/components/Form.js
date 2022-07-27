@@ -30,7 +30,7 @@ function Form() {
     job: job,
   };
   return (
-    <div className="form" class="grid col-span-3">
+    <div className="form" class="grid grid-cols-2">
       <form>
         <legend> Personal details</legend>
         <fieldset>
