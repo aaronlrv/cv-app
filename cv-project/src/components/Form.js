@@ -34,26 +34,29 @@ function Form() {
       className="form"
       class="grid grid-cols-2 grid-rows-1 bg-zinc-100 h-screen"
     >
-      <form>
+      <form class="m-3">
         <legend class="mb-5 font-bold underline size text-2xl">
           {" "}
           Personal details
         </legend>
         <fieldset>
-          <div className="personal">
-            <div className="nameDiv">
-              <label htmlFor="name">Name:</label>
+          <div className="personal" class="mb-8">
+            <div className="nameDiv" class="mb-3">
+              <label class="mt-3 w-24 inline-block" htmlFor="name">
+                Name:
+              </label>
               <input
                 type="text"
                 name="name"
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                class="text-red-500	"
               />
             </div>
-            <div className="numberDiv">
-              <label htmlFor="number">Number:</label>
+            <div className="numberDiv" class="mb-3">
+              <label class="mt-3 w-24 inline-block" htmlFor="number">
+                Number:
+              </label>
               <input
                 type="text"
                 name="number"
@@ -62,8 +65,10 @@ function Form() {
                 onChange={(e) => setNumber(e.target.value)}
               />
             </div>
-            <div className="emailDiv">
-              <label htmlFor="email">Email:</label>
+            <div className="emailDiv" class="mb-3">
+              <label class="mt-3 w-24 inline-block" htmlFor="email">
+                Email:
+              </label>
               <input
                 type="text"
                 name="email"
@@ -72,8 +77,10 @@ function Form() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="locationDiv">
-              <label htmlFor="location">Location:</label>
+            <div className="locationDiv" class="mb-3">
+              <label class="mt-3 w-24 inline-block" htmlFor="location">
+                Location:
+              </label>
               <input
                 type="text"
                 name="location"
@@ -93,7 +100,9 @@ function Form() {
           <div className="education">
             <div className="school">
               <div className="schoolDiv">
-                <label htmlFor="school">School:</label>
+                <label class="mt-3 w-24 inline-block" htmlFor="school">
+                  School:
+                </label>
                 <input
                   type="text"
                   name="school"
@@ -103,7 +112,9 @@ function Form() {
                 />
               </div>
               <div className="courseDiv">
-                <label htmlFor="course">Course Name:</label>
+                <label class="mt-3 w-24 inline-block" htmlFor="course">
+                  Course Name:
+                </label>
                 <input
                   type="text"
                   name="course"
@@ -113,7 +124,9 @@ function Form() {
                 />
               </div>
               <div className="dateStart">
-                <label htmlFor="dateStart">Start Date</label>
+                <label class="mt-3 w-24 inline-block" htmlFor="dateStart">
+                  Start Date
+                </label>
                 <input
                   type="text"
                   name="dateStart"
@@ -123,7 +136,9 @@ function Form() {
                 />
               </div>
               <div className="dateEnd">
-                <label htmlFor="dateEnd">End Date</label>
+                <label class="mt-3 w-24 inline-block" htmlFor="dateEnd">
+                  End Date
+                </label>
                 <input
                   type="text"
                   name="dateEnd"
@@ -142,7 +157,9 @@ function Form() {
         <fieldset>
           <div className="work">
             <div className="workDiv">
-              <label htmlFor="workPlace">Work Place:</label>
+              <label class="mt-3 w-24 inline-block" htmlFor="workPlace">
+                Work Place:
+              </label>
               <input
                 type="text"
                 name="workPlace"
@@ -152,7 +169,9 @@ function Form() {
               />
             </div>
             <div className="">
-              <label htmlFor="workStart">Work Start:</label>
+              <label class="mt-3 w-24 inline-block" htmlFor="workStart">
+                Work Start:
+              </label>
               <input
                 type="text"
                 name="workStart"
@@ -162,7 +181,9 @@ function Form() {
               />
             </div>
             <div className="">
-              <label htmlFor="workEnd">Work End:</label>
+              <label class="mt-3 w-24 inline-block" htmlFor="workEnd">
+                Work End:
+              </label>
               <input
                 type="text"
                 name="workEnd"
@@ -172,7 +193,9 @@ function Form() {
               />
             </div>
             <div className="">
-              <label htmlFor="jobRole">Job role:</label>
+              <label class="mt-3 w-24 inline-block" htmlFor="jobRole">
+                Job role:
+              </label>
               <input
                 type="text"
                 name="jobRole"
