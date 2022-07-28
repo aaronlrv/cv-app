@@ -52,6 +52,8 @@ function Form() {
       {
         school: schoolName,
         course: courseName,
+        startDate: startDate,
+        endDate: endDate,
       },
     ]);
   }
