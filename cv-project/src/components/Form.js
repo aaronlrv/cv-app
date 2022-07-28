@@ -6,7 +6,9 @@ function Form() {
   let [number, setNumber] = useState("06531239685");
   let [email, setEmail] = useState("example@mail.com");
   let [location, setLocation] = useState("USA, Kentucky");
-
+  let [summary, setSummary] = useState(
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  );
   let [work, setWork] = useState([]);
   let [education, setEducation] = useState([]);
 
@@ -14,6 +16,7 @@ function Form() {
     name: name,
     education,
     work,
+    summary,
     number: number,
     email: email,
   };
@@ -116,7 +119,12 @@ function Form() {
                 <label class="mt-3 w-24 inline-block" htmlFor="summary">
                   Summary
                 </label>
-                <input type="text" name="summary" id="summary" />
+                <input
+                  onChange={(e) => setSummary(e.target.value)}
+                  type="text"
+                  name="summary"
+                  id="summary"
+                />
               </div>
             </div>
           </fieldset>
