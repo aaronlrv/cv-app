@@ -6,7 +6,7 @@ function Form() {
   let [number, setNumber] = useState("06531239685");
   let [email, setEmail] = useState("example@mail.com");
   let [location, setLocation] = useState("USA, Kentucky");
-  let [object, setObject] = useState([]);
+  let [education, setEducation] = useState([]);
   let [workPlace, setWorkPlace] = useState([]);
   let [workStart, setWorkStart] = useState([]);
   let [workEnd, setWorkEnd] = useState([]);
@@ -14,12 +14,10 @@ function Form() {
 
   let props = {
     name: name,
-    object,
+    education,
     number: number,
     email: email,
-
     location: location,
-
     workPlace: workPlace,
     workStart: workStart,
     workEnd: workEnd,
@@ -37,7 +35,7 @@ function Form() {
     console.log(startDate);
     console.log(endDate);
 
-    setObject((prev) => [
+    setEducation((prev) => [
       ...prev,
       {
         school: schoolName,
