@@ -219,6 +219,7 @@ function Form() {
                 />
               </div>
             </div>
+            <button onClick={(e) => addWork(e)}>Submit work</button>
           </fieldset>
         </div>
       </form>
