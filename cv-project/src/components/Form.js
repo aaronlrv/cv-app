@@ -47,6 +47,24 @@ function Form() {
     setEndDate((prev) => [...prev, endDate]);
   }
 
+  function addWork(e) {
+    e.preventDefault();
+    let workPlace = document.getElementById("workPlace").value;
+    let workStart = document.getElementById("workStart").value;
+    let workEnd = document.getElementById("workEnd").value;
+    let jobRole = document.getElementById("jobRole").value;
+
+    console.log(workPlace);
+    console.log(workStart);
+    console.log(workEnd);
+    console.log(jobRole);
+
+    setWorkPlace((prev) => [...prev, workPlace]);
+    setWorkStart((prev) => [...prev, workStart]);
+    setWorkEnd((prev) => [...prev, workEnd]);
+    setJob((prev) => [...prev, jobRole]);
+  }
+
   return (
     <div
       className="form"
