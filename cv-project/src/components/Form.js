@@ -10,10 +10,10 @@ function Form() {
   let [course, setCourse] = useState([]);
   let [startDate, setStartDate] = useState([]);
   let [endDate, setEndDate] = useState([]);
-  let [workPlace, setWorkPlace] = useState("Microsoft");
-  let [workStart, setWorkStart] = useState("2000");
-  let [workEnd, setWorkEnd] = useState("Present");
-  let [job, setJob] = useState("Front end Developer");
+  let [workPlace, setWorkPlace] = useState([]);
+  let [workStart, setWorkStart] = useState([]);
+  let [workEnd, setWorkEnd] = useState([]);
+  let [job, setJob] = useState([]);
 
   let props = {
     name: name,
@@ -174,49 +174,25 @@ function Form() {
                 <label class="mt-3 w-24 inline-block" htmlFor="workPlace">
                   Work Place:
                 </label>
-                <input
-                  type="text"
-                  name="workPlace"
-                  id="workPlace"
-                  value={workPlace}
-                  onChange={(e) => setWorkPlace(e.target.value)}
-                />
+                <input type="text" name="workPlace" id="workPlace" />
               </div>
               <div className="">
                 <label class="mt-3 w-24 inline-block" htmlFor="workStart">
                   Work Start:
                 </label>
-                <input
-                  type="text"
-                  name="workStart"
-                  id="workStart"
-                  value={workStart}
-                  onChange={(e) => setWorkStart(e.target.value)}
-                />
+                <input type="text" name="workStart" id="workStart" />
               </div>
               <div className="">
                 <label class="mt-3 w-24 inline-block" htmlFor="workEnd">
                   Work End:
                 </label>
-                <input
-                  type="text"
-                  name="workEnd"
-                  id="workEnd"
-                  value={workEnd}
-                  onChange={(e) => setWorkEnd(e.target.value)}
-                />
+                <input type="text" name="workEnd" id="workEnd" />
               </div>
               <div className="">
                 <label class="mt-3 w-24 inline-block" htmlFor="jobRole">
                   Job role:
                 </label>
-                <input
-                  type="text"
-                  name="jobRole"
-                  id="jobRole"
-                  value={job}
-                  onChange={(e) => setJob(e.target.value)}
-                />
+                <input type="text" name="jobRole" id="jobRole" />
               </div>
             </div>
             <button onClick={(e) => addWork(e)}>Submit work</button>
