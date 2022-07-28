@@ -7,9 +7,9 @@ function Form() {
   let [email, setEmail] = useState("example@mail.com");
   let [location, setLocation] = useState("USA, Kentucky");
   let [school, setSchool] = useState([]);
-  let [course, setCourse] = useState("BS Computer Science");
-  let [startDate, setStartDate] = useState("2020");
-  let [endDate, setEndDate] = useState("Present");
+  let [course, setCourse] = useState([]);
+  let [startDate, setStartDate] = useState([]);
+  let [endDate, setEndDate] = useState([]);
   let [workPlace, setWorkPlace] = useState("Microsoft");
   let [workStart, setWorkStart] = useState("2000");
   let [workEnd, setWorkEnd] = useState("Present");
@@ -30,12 +30,21 @@ function Form() {
     job: job,
   };
 
-  function addSchool(e) {
+  function addEducation(e) {
     e.preventDefault();
-    let name = document.getElementById("school").value;
-    console.log(name);
+    let schoolName = document.getElementById("school").value;
+    let courseName = document.getElementById("course").value;
+    let startDate = document.getElementById("dateStart").value;
+    let endDate = document.getElementById("dateEnd").value;
+    console.log(schoolName);
+    console.log(courseName);
+    console.log(startDate);
+    console.log(endDate);
 
-    setSchool((prev) => [...prev, name]);
+    setSchool((prev) => [...prev, schoolName]);
+    setCourse((prev) => [...prev, courseName]);
+    setStartDate((prev) => [...prev, startDate]);
+    setEndDate((prev) => [...prev, endDate]);
   }
 
   return (
@@ -114,51 +123,28 @@ function Form() {
                     School:
                   </label>
                   <input type="text" name="school" id="school" />
-                  <button onClick={(e) => addSchool(e)}>Submit</button>
                 </div>
                 <div className="courseDiv">
                   <label class="mt-3 w-24 inline-block" htmlFor="course">
                     Course Name:
                   </label>
-                  <input
-                    type="text"
-                    name="course"
-                    id="course"
-                    value={course}
-                    onChange={(e) => setCourse(e.target.value)}
-                  />
-                  <button>Submit</button>
+                  <input type="text" name="course" id="course" />
                 </div>
                 <div className="dateStart">
                   <label class="mt-3 w-24 inline-block" htmlFor="dateStart">
                     Start Date
                   </label>
-                  <input
-                    type="text"
-                    name="dateStart"
-                    id="dateStart"
-                    value={startDate}
-                    onChange={(e) =>
-                      setStartDate(e.target.value) + console.log(e.target.name)
-                    }
-                  />
-                  <button>Submit</button>
+                  <input type="text" name="dateStart" id="dateStart" />
                 </div>
                 <div className="dateEnd">
                   <label class="mt-3 w-24 inline-block" htmlFor="dateEnd">
                     End Date
                   </label>
-                  <input
-                    type="text"
-                    name="dateEnd"
-                    id="dateEnd"
-                    value={endDate}
-                    onChange={(e) => setEndDate(e.target.value)}
-                  />
-                  <button>Submit</button>
+                  <input type="text" name="dateEnd" id="dateEnd" />
                 </div>
               </div>
             </div>
+            <button onClick={(e) => addEducation(e)}>Submit</button>
           </fieldset>
 
           <legend class="mb-5 font-bold underline size text-2xl">
