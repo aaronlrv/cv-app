@@ -8,10 +8,6 @@ function Form() {
   let [location, setLocation] = useState("USA, Kentucky");
   let [work, setWork] = useState([]);
   let [education, setEducation] = useState([]);
-  let [workPlace, setWorkPlace] = useState([]);
-  let [workStart, setWorkStart] = useState([]);
-  let [workEnd, setWorkEnd] = useState([]);
-  let [job, setJob] = useState([]);
 
   let props = {
     name: name,
@@ -19,11 +15,6 @@ function Form() {
     work,
     number: number,
     email: email,
-    location: location,
-    workPlace: workPlace,
-    workStart: workStart,
-    workEnd: workEnd,
-    job: job,
   };
 
   function addEducation(e) {
@@ -59,11 +50,6 @@ function Form() {
     console.log(workStart);
     console.log(workEnd);
     console.log(jobRole);
-
-    setWorkPlace((prev) => [...prev, workPlace]);
-    setWorkStart((prev) => [...prev, workStart]);
-    setWorkEnd((prev) => [...prev, workEnd]);
-    setJob((prev) => [...prev, jobRole]);
 
     setWork((prev) => [
       ...prev,
