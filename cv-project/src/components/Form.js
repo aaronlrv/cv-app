@@ -6,6 +6,7 @@ function Form() {
   let [number, setNumber] = useState("06531239685");
   let [email, setEmail] = useState("example@mail.com");
   let [location, setLocation] = useState("USA, Kentucky");
+  let [object, setObject] = useState([]);
   let [school, setSchool] = useState([]);
   let [course, setCourse] = useState([]);
   let [startDate, setStartDate] = useState([]);
@@ -17,6 +18,7 @@ function Form() {
 
   let props = {
     name: name,
+    object,
     number: number,
     email: email,
     school: [school],
@@ -45,6 +47,13 @@ function Form() {
     setCourse((prev) => [...prev, courseName]);
     setStartDate((prev) => [...prev, startDate]);
     setEndDate((prev) => [...prev, endDate]);
+    setObject((prev) => [
+      ...prev,
+      {
+        school: schoolName,
+        course: courseName,
+      },
+    ]);
   }
 
   function addWork(e) {
