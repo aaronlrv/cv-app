@@ -7,10 +7,6 @@ function Form() {
   let [email, setEmail] = useState("example@mail.com");
   let [location, setLocation] = useState("USA, Kentucky");
   let [object, setObject] = useState([]);
-  let [school, setSchool] = useState([]);
-  let [course, setCourse] = useState([]);
-  let [startDate, setStartDate] = useState([]);
-  let [endDate, setEndDate] = useState([]);
   let [workPlace, setWorkPlace] = useState([]);
   let [workStart, setWorkStart] = useState([]);
   let [workEnd, setWorkEnd] = useState([]);
@@ -21,11 +17,9 @@ function Form() {
     object,
     number: number,
     email: email,
-    school: [school],
+
     location: location,
-    course: [course],
-    startDate: startDate,
-    endDate: endDate,
+
     workPlace: workPlace,
     workStart: workStart,
     workEnd: workEnd,
@@ -43,10 +37,6 @@ function Form() {
     console.log(startDate);
     console.log(endDate);
 
-    setSchool((prev) => [...prev, schoolName]);
-    setCourse((prev) => [...prev, courseName]);
-    setStartDate((prev) => [...prev, startDate]);
-    setEndDate((prev) => [...prev, endDate]);
     setObject((prev) => [
       ...prev,
       {
