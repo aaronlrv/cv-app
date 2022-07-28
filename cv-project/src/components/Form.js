@@ -6,6 +6,7 @@ function Form() {
   let [number, setNumber] = useState("06531239685");
   let [email, setEmail] = useState("example@mail.com");
   let [location, setLocation] = useState("USA, Kentucky");
+
   let [work, setWork] = useState([]);
   let [education, setEducation] = useState([]);
 
@@ -23,10 +24,6 @@ function Form() {
     let courseName = document.getElementById("course").value;
     let startDate = document.getElementById("dateStart").value;
     let endDate = document.getElementById("dateEnd").value;
-    console.log(schoolName);
-    console.log(courseName);
-    console.log(startDate);
-    console.log(endDate);
 
     setEducation((prev) => [
       ...prev,
@@ -45,11 +42,6 @@ function Form() {
     let workStart = document.getElementById("workStart").value;
     let workEnd = document.getElementById("workEnd").value;
     let jobRole = document.getElementById("jobRole").value;
-
-    console.log(workPlace);
-    console.log(workStart);
-    console.log(workEnd);
-    console.log(jobRole);
 
     setWork((prev) => [
       ...prev,
@@ -119,6 +111,12 @@ function Form() {
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                 />
+              </div>
+              <div className="summaryDiv" class="mb">
+                <label class="mt-3 w-24 inline-block" htmlFor="summary">
+                  Summary
+                </label>
+                <input type="text" name="summary" id="summary" />
               </div>
             </div>
           </fieldset>
