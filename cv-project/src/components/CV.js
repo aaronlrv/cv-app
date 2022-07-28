@@ -22,7 +22,7 @@ function CV(props) {
       </div>
 
       <div className="Education" class="grid grid-cols-3 grid-rows-1 mb-5">
-        {props.object.map((x) => (
+        {props.education.map((x) => (
           <>
             <div className="right" class="flex flex-col">
               <h3 class="bg-red-500">{x.school}</h3>
@@ -44,14 +44,21 @@ function CV(props) {
         <hr class="w-auto h-1 bg-gray-300 0 border-r-2"></hr>
       </div>
       <div class="grid grid-cols-3 grid-rows-1 mb-5">
-        <div className="right" class="flex flex-col">
-          <h1>{props.job}</h1>
-          <h3>{props.workPlace}</h3>
-        </div>
-        <div className="left" class="flex gap-3 justify-end col-start-3 pl-2">
-          <p>{props.workStart} - </p>
-          <p>{props.workEnd}</p>
-        </div>
+        {props.work.map((x) => (
+          <>
+            <div className="right" class="flex flex-col">
+              <h1>{x.jobRole}</h1>
+              <h3>{x.workPlace}</h3>
+            </div>
+            <div
+              className="left"
+              class="flex gap-3 justify-end col-start-3 pl-2"
+            >
+              <p>{x.workStart} - </p>
+              <p>{x.workEnd}</p>
+            </div>
+          </>
+        ))}
       </div>
     </div>
   );
