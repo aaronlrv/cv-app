@@ -17,6 +17,15 @@ function CV(props) {
       </div>
 
       <div class="mt-5">
+        <h2 class="">Summary</h2>
+        <hr class="w-auto h-1 bg-gray-300 0 border-r-2"></hr>
+      </div>
+
+      <div className="summary">
+        <p> {props.summary} </p>
+      </div>
+
+      <div class="mt-5">
         <h2 class="">Education</h2>
         <hr class="w-auto h-1 bg-gray-300 0 border-r-2"></hr>
       </div>
