@@ -20,6 +20,7 @@ function Form() {
     summary,
     number: number,
     email: email,
+    location: location,
   };
 
   function addEducation(e) {
@@ -64,7 +65,7 @@ function Form() {
   return (
     <div
       className="form"
-      class="grid grid-cols-[500px_750px] grid-rows-1 justify-center gap-24 "
+      class="grid grid-cols-[500px_700px] grid-rows-1 justify-center gap-24 "
     >
       <form class="m-3 border-black border-2">
         <div class="m-3">
