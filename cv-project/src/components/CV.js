@@ -4,15 +4,16 @@ import { jsPDF } from "jspdf";
 function CV(props) {
   return (
     <div>
-      <div className="cv" id="capture">
+      <h3 class="font-bold underline size text-2xl">CV Preview</h3>
+      <div className="cv" id="capture" class="border-black border-2">
         <div
           className="personalDetai"
           class="flex flex-col bg-slate-300 h-500 h-20 justify-center align-center m-3"
         >
-          <div class="flex flex-row justify-center align-center text-3xl underline">
+          <div class="flex flex-row justify-center align-center text-4xl underline">
             <p>{props.name} </p>
           </div>
-          <div class="flex flex-row justify-center align-center gap-5">
+          <div class="flex flex-row justify-center align-center gap-5 text-xl">
             <h3>{props.email}</h3>
 
             <h3>{props.number}</h3>
