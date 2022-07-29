@@ -148,7 +148,7 @@ function Form() {
           </legend>
           <fieldset>
             <div className="education">
-              <div className="school" class="mb-8">
+              <div className="school">
                 <div className="schoolDiv">
                   <label class="mt-3 w-24 inline-block" htmlFor="school">
                     School:
@@ -195,7 +195,12 @@ function Form() {
                 </div>
               </div>
             </div>
-            <button onClick={(e) => addEducation(e)}>Submit</button>
+            <button
+              onClick={(e) => addEducation(e)}
+              class="mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
+            >
+              Submit
+            </button>
           </fieldset>
 
           <legend class="mb-5 font-bold underline size text-2xl">
@@ -259,7 +264,12 @@ function Form() {
                 />
               </div>
             </div>
-            <button onClick={(e) => addWork(e)}>Submit work</button>
+            <button
+              onClick={(e) => addWork(e)}
+              class="mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
+            >
+              Submit work
+            </button>
           </fieldset>
         </div>
       </form>

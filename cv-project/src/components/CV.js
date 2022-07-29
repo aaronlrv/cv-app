@@ -78,7 +78,12 @@ function CV(props) {
         </div>
       </div>
       <div class="flex justify-center ">
-        <button onClick={() => saveCanvas()}>Save Canvas</button>
+        <button
+          onClick={() => saveCanvas()}
+          class="mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
+        >
+          Save Canvas
+        </button>
       </div>
     </div>
   );
