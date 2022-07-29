@@ -3,8 +3,7 @@ import { jsPDF } from "jspdf";
 
 function CV(props) {
   return (
-    <div>
-      <h3 class="font-bold underline size text-2xl">CV Preview</h3>
+    <div class="mt-3">
       <div class="border-black border-2 p-3">
         <div className="cv" id="capture">
           <div
@@ -39,16 +38,16 @@ function CV(props) {
           <div className="Education" class="grid grid-cols-3 grid-rows-1 mb-5">
             {props.education.map((x) => (
               <>
-                <div className="right" class="flex flex-col">
-                  <h3 class="bg-red-500">{x.school}</h3>
-                  <h3 class="bg-red-700">{x.course}</h3>
+                <div className="right" class="flex flex-col mb-3">
+                  <h3 class="text-lg">{x.school}</h3>
+                  <h3 class="">{x.course}</h3>
                 </div>
                 <div
                   className="left"
                   class="flex gap-3 justify-end col-start-3 pl-2"
                 >
-                  <p class="bg-green-400">{x.startDate} - </p>
-                  <p class="bg-green-700">{x.endDate}</p>
+                  <p class="italic">{x.startDate} - </p>
+                  <p class="italic">{x.endDate}</p>
                 </div>
               </>
             ))}
@@ -62,16 +61,16 @@ function CV(props) {
             {props.work.map((x) => (
               <>
                 <div className="right" class="flex flex-col">
-                  <h1>{x.jobRole}</h1>
-                  <h3>{x.workPlace}</h3>
-                  <h3>{x.summary}</h3>
+                  <h1 class="text-lg">{x.jobRole}</h1>
+                  <h3 class="text-lg">{x.workPlace}</h3>
+                  <h3 class="text-sm">{x.summary}</h3>
                 </div>
                 <div
                   className="left"
                   class="flex gap-3 justify-end col-start-3 pl-2"
                 >
-                  <p>{x.workStart} - </p>
-                  <p>{x.workEnd}</p>
+                  <p class="italic">{x.workStart} - </p>
+                  <p class="italic">{x.workEnd}</p>
                 </div>
               </>
             ))}
