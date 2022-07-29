@@ -1,6 +1,9 @@
+import html2canvas from "html2canvas";
+import { jsPDF } from "jspdf";
+
 function CV(props) {
   return (
-    <div className="cv">
+    <div className="cv" id="capture">
       <div
         className="personalDetai"
         class="flex flex-col bg-slate-300 h-500 h-20 justify-center align-center m-3"
@@ -58,6 +61,7 @@ function CV(props) {
             <div className="right" class="flex flex-col">
               <h1>{x.jobRole}</h1>
               <h3>{x.workPlace}</h3>
+              <h3>{x.summary}</h3>
             </div>
             <div
               className="left"
@@ -69,8 +73,22 @@ function CV(props) {
           </>
         ))}
       </div>
+      <button onClick={saveCanvas()}></button>
     </div>
   );
+}
+
+function saveCanvas() {
+  html2canvas(document.querySelector("#capture")).then((canvas) => {
+    let cv = document.querySelector("#capture");
+    console.log(canvas);
+    console.log(canvas.json);
+
+    cv.appendChild(canvas);
+
+    let doc = new jsPDF();
+    doc.save(canvas);
+  });
 }
 
 export default CV;

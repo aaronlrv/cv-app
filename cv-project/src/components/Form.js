@@ -11,6 +11,7 @@ function Form() {
   );
   let [work, setWork] = useState([]);
   let [education, setEducation] = useState([]);
+  let [workSummary, setWorkSummary] = useState("");
 
   let props = {
     name: name,
@@ -45,6 +46,8 @@ function Form() {
     let workStart = document.getElementById("workStart").value;
     let workEnd = document.getElementById("workEnd").value;
     let jobRole = document.getElementById("jobRole").value;
+    let summary = document.getElementById("a").value;
+    console.log(summary);
 
     setWork((prev) => [
       ...prev,
@@ -53,6 +56,7 @@ function Form() {
         workStart: workStart,
         workEnd: workEnd,
         jobRole: jobRole,
+        summary: summary,
       },
     ]);
   }
@@ -124,6 +128,7 @@ function Form() {
                   type="text"
                   name="summary"
                   id="summary"
+                  value={workSummary}
                 />
               </div>
             </div>
@@ -193,6 +198,12 @@ function Form() {
                   Job role:
                 </label>
                 <input type="text" name="jobRole" id="jobRole" />
+              </div>
+              <div className="">
+                <label class="mt-3 w-24 inline-block" htmlFor="summary">
+                  Job Summary
+                </label>
+                <input type="text" name="summary" id="a" />
               </div>
             </div>
             <button onClick={(e) => addWork(e)}>Submit work</button>

@@ -1,8 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Form from "./components/Form";
 
-function App() {
-  return <h1 className="text-red-900		"> Hi!</h1>;
-}
+function App() {}
 
 export default App;
