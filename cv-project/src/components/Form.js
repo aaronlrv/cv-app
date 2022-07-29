@@ -81,6 +81,7 @@ function Form() {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  class="border-solid border-2 border-slate-700 rounded-md"
                 />
               </div>
               <div className="numberDiv" class="mb-3">
@@ -93,6 +94,7 @@ function Form() {
                   id="number"
                   value={number}
                   onChange={(e) => setNumber(e.target.value)}
+                  class="border-solid border-2 border-slate-700 rounded-md"
                 />
               </div>
               <div className="emailDiv" class="mb-3">
@@ -105,6 +107,7 @@ function Form() {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  class="border-solid border-2 border-slate-700 rounded-md"
                 />
               </div>
               <div className="locationDiv" class="mb-3">
@@ -117,6 +120,7 @@ function Form() {
                   id="location"
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
+                  class="border-solid border-2 border-slate-700 rounded-md"
                 />
               </div>
               <div className="summaryDiv" class="mb">
@@ -128,7 +132,7 @@ function Form() {
                   type="text"
                   name="summary"
                   id="summary"
-                  value={workSummary}
+                  class="border-solid border-2 border-slate-700 rounded-md"
                 />
               </div>
             </div>
@@ -145,25 +149,45 @@ function Form() {
                   <label class="mt-3 w-24 inline-block" htmlFor="school">
                     School:
                   </label>
-                  <input type="text" name="school" id="school" />
+                  <input
+                    type="text"
+                    name="school"
+                    id="school"
+                    class="border-solid border-2 border-slate-700 rounded-md"
+                  />
                 </div>
                 <div className="courseDiv">
                   <label class="mt-3 w-24 inline-block" htmlFor="course">
                     Course Name:
                   </label>
-                  <input type="text" name="course" id="course" />
+                  <input
+                    type="text"
+                    name="course"
+                    id="course"
+                    class="border-solid border-2 border-slate-700 rounded-md"
+                  />
                 </div>
                 <div className="dateStart">
                   <label class="mt-3 w-24 inline-block" htmlFor="dateStart">
                     Start Date
                   </label>
-                  <input type="text" name="dateStart" id="dateStart" />
+                  <input
+                    type="text"
+                    name="dateStart"
+                    id="dateStart"
+                    class="border-solid border-2 border-slate-700 rounded-md"
+                  />
                 </div>
                 <div className="dateEnd">
                   <label class="mt-3 w-24 inline-block" htmlFor="dateEnd">
                     End Date
                   </label>
-                  <input type="text" name="dateEnd" id="dateEnd" />
+                  <input
+                    type="text"
+                    name="dateEnd"
+                    id="dateEnd"
+                    class="border-solid border-2 border-slate-700 rounded-md"
+                  />
                 </div>
               </div>
             </div>
@@ -179,31 +203,56 @@ function Form() {
                 <label class="mt-3 w-24 inline-block" htmlFor="workPlace">
                   Work Place:
                 </label>
-                <input type="text" name="workPlace" id="workPlace" />
+                <input
+                  type="text"
+                  name="workPlace"
+                  id="workPlace"
+                  class="border-solid border-2 border-slate-700 rounded-md"
+                />
               </div>
               <div className="">
                 <label class="mt-3 w-24 inline-block" htmlFor="workStart">
                   Work Start:
                 </label>
-                <input type="text" name="workStart" id="workStart" />
+                <input
+                  type="text"
+                  name="workStart"
+                  id="workStart"
+                  class="border-solid border-2 border-slate-700 rounded-md"
+                />
               </div>
               <div className="">
                 <label class="mt-3 w-24 inline-block" htmlFor="workEnd">
                   Work End:
                 </label>
-                <input type="text" name="workEnd" id="workEnd" />
+                <input
+                  type="text"
+                  name="workEnd"
+                  id="workEnd"
+                  class="border-solid border-2 border-slate-700 rounded-md"
+                />
               </div>
               <div className="">
                 <label class="mt-3 w-24 inline-block" htmlFor="jobRole">
                   Job role:
                 </label>
-                <input type="text" name="jobRole" id="jobRole" />
+                <input
+                  type="text"
+                  name="jobRole"
+                  id="jobRole"
+                  class="border-solid border-2 border-slate-700 rounded-md"
+                />
               </div>
               <div className="">
                 <label class="mt-3 w-24 inline-block" htmlFor="summary">
                   Job Summary
                 </label>
-                <input type="text" name="summary" id="a" />
+                <input
+                  type="text"
+                  name="summary"
+                  id="a"
+                  class="border-solid border-2 border-slate-700 rounded-md"
+                />
               </div>
             </div>
             <button onClick={(e) => addWork(e)}>Submit work</button>
