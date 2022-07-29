@@ -73,7 +73,7 @@ function CV(props) {
           </>
         ))}
       </div>
-      <button onClick={saveCanvas()}></button>
+      <button onClick={() => saveCanvas()}>Save Canvas</button>
     </div>
   );
 }
