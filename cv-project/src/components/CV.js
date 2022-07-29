@@ -10,10 +10,10 @@ function CV(props) {
           className="personalDetai"
           class="flex flex-col bg-slate-300 h-500 h-20 justify-center align-center m-3"
         >
-          <div class="flex flex-row justify-center align-center text-4xl underline">
+          <div class="flex flex-row justify-center align-center text-4xl ">
             <p>{props.name} </p>
           </div>
-          <div class="flex flex-row justify-center align-center gap-5 text-xl">
+          <div class="flex flex-row justify-center align-center gap-5">
             <h3>{props.email}</h3>
 
             <h3>{props.number}</h3>
