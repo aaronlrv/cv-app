@@ -62,7 +62,10 @@ function Form() {
   }
 
   return (
-    <div className="form" class="grid grid-cols-2 grid-rows-1 ">
+    <div
+      className="form"
+      class="grid grid-cols-[500px_750px] grid-rows-1 justify-center gap-24 "
+    >
       <form class="m-3 border-black border-2">
         <div class="m-3">
           <legend class="mb-5 font-bold underline size text-2xl">
