@@ -79,15 +79,23 @@ function CV(props) {
 }
 
 function saveCanvas() {
-  html2canvas(document.querySelector("#capture")).then((canvas) => {
+  html2canvas(document.querySelector("#capture"), {
+    allowTaint: true,
+    useCORS: true,
+  }).then((canvas) => {
     let cv = document.querySelector("#capture");
+    let img = canvas.toDataURL("image/png");
+
     console.log(canvas);
     console.log(canvas.json);
 
     cv.appendChild(canvas);
 
     let doc = new jsPDF();
-    doc.save(canvas);
+    doc.setFont("Arial");
+    doc.getFontSize(11);
+    doc.addImage(img, "PNG", 0, 0, 1920, 1080);
+    doc.save();
   });
 }
 
