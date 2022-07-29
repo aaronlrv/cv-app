@@ -80,22 +80,24 @@ function CV(props) {
 
 function saveCanvas() {
   html2canvas(document.querySelector("#capture"), {
-    allowTaint: true,
+    logging: true,
+    letterRendering: 1,
     useCORS: true,
   }).then((canvas) => {
     let cv = document.querySelector("#capture");
     let img = canvas.toDataURL("image/png");
-
+    let imgWidth = 208;
     console.log(canvas);
-    console.log(canvas.json);
+    console.log(canvas.height);
+    console.log(canvas.width);
+    let calc = (canvas.height * imgWidth) / canvas.width;
+    let imgHeight = Math.floor(calc);
+    console.log(imgHeight);
+    let doc = new jsPDF("p", "mm", "a4");
+    doc.addImage(img, "PNG", 2, 0, imgWidth, imgHeight);
+    doc.save();
 
     cv.appendChild(canvas);
-
-    let doc = new jsPDF();
-    doc.setFont("Arial");
-    doc.getFontSize(11);
-    doc.addImage(img, "PNG", 0, 0, 1920, 1080);
-    doc.save();
   });
 }
 
