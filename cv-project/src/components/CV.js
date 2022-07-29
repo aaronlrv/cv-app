@@ -94,10 +94,8 @@ function saveCanvas() {
     let imgHeight = Math.floor(calc);
     console.log(imgHeight);
     let doc = new jsPDF("p", "mm", "a4");
-    doc.addImage(img, "PNG", 2, 0, imgWidth, imgHeight);
+    doc.addImage(img, "PNG", 2, 0, imgWidth, imgHeight, "a", "NONE");
     doc.save();
-
-    cv.appendChild(canvas);
   });
 }
 
