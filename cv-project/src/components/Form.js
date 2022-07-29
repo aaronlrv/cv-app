@@ -136,6 +136,7 @@ function Form() {
                   type="text"
                   name="summary"
                   id="summary"
+                  value={summary}
                   class="border-solid border-2 border-slate-700 rounded-md"
                 />
               </div>
@@ -197,9 +198,9 @@ function Form() {
             </div>
             <button
               onClick={(e) => addEducation(e)}
-              class="mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
+              class=" hover:border-slate-700 mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
             >
-              Submit
+              Add Education
             </button>
           </fieldset>
 
@@ -266,9 +267,9 @@ function Form() {
             </div>
             <button
               onClick={(e) => addWork(e)}
-              class="mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
+              class=" hover:border-slate-700 mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
             >
-              Submit work
+              Add Work Experience
             </button>
           </fieldset>
         </div>

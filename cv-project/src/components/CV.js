@@ -80,9 +80,9 @@ function CV(props) {
       <div class="flex justify-center ">
         <button
           onClick={() => saveCanvas()}
-          class="mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
+          class=" hover:border-slate-700 mb-4 mt-3 border-solid rounded-md border-2 w-[22rem]"
         >
-          Save Canvas
+          Download CV
         </button>
       </div>
     </div>
