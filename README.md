@@ -17,7 +17,7 @@ I also styled the entire project using TailwindCSS for the first time which was 
 
 ## How to Use
 
-Use this link to access the live preview link: https://aaronlrv.github.io/cv-app/
+Use this link to access the live preview link: https://aaronlrv.github.io/cv-app/ or view the latest github pages deployment of the project
 
 ## Tech/ Framework Used
 <p align="left"> 
